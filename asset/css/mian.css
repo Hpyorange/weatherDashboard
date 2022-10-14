@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    margin-top: 40px;
+}
+
+.searchBox{
+    border-radius: 18px;
+}
+
+.mybtn{
+    background-color: rgba(84, 177, 253, 0.6);
+}
+
+.mybtn:hover{
+    background-color: rgba(10, 143, 252, 0.6);
+    color: #fff;
+    
+}

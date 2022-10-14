@@ -5,30 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="./asset/css/mian.css">
 </head>
 
 <body>
-    <div class="header">
+
+<div class="text-center mt-4">
+    <h1>Weather Dashboard</h1>
+</div>
+
+<div class="container d-flex justify-content-center">
+
+    <div class="header row col-xxl-10 text-center">
         
-        <div class="searchBox">
-            <input type="text" placeholder="Search for location">
-            <button class="searchBtn"></button>
-        </div>
-
-        <div class="mainCityBox" id="1stCity">
-
-        </div>
-
-        <div class="mainCityBox" id="2ndCity">
-            
-        </div>
-
-        <div class="mainCityBox" id="3rdCity">
-            
+      <div class="col-4">
+        
+        <div class="input-group">
+            <input type="text" placeholder="Search for location" class="form-control searchBox">
+            <button class="searchBtn col-3 btn mybtn input-group-append searchBox"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
 
     </div>
+
+        <div class="mainCityBox col-4 d-flex justify-content-evenly align-items-center" id="1stCity">
+            <div>Toronto</div>
+            <div><i class="fa-solid fa-wind"></i></div>
+            <div>18C</div>
+        </div>
+
+        <div class="mainCityBox col-4 d-flex justify-content-evenly align-items-center" id="2ndCity">
+            <div>Toronto</div>
+            <div><i class="fa-solid fa-wind"></i></div>
+            <div>18C</div>
+        </div>
+
+
+    </div>
+
+</div>
+
 
     <div class="recentSearchBox">
 
