@@ -7,53 +7,72 @@
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="./asset/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="./asset/css/mian.css">
 </head>
 
 <body>
 
-<div class="text-center mt-4">
-    <h1>Weather Dashboard</h1>
-</div>
-
-<div class="container d-flex justify-content-center">
-
-    <div class="header row col-xxl-10 text-center">
-        
-      <div class="col-4">
-        
-        <div class="input-group">
-            <input type="text" placeholder="Search for location" class="form-control searchBox">
-            <button class="searchBtn col-3 btn mybtn input-group-append searchBox"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
-
+    <div class="text-center mt-4 title">
+        <h1>Weather Dashboard</h1>
     </div>
+
+    <div class="container d-flex justify-content-center functionBar">
+
+        <div class="myBox row col-xxl-10 text-center">
+        
+        <div class="col-4">
+        
+            <div class="input-group">
+                <input type="text" placeholder="Search for location" class="form-control searchBox">
+                <button class="searchBtn col-3 btn mybtn input-group-append searchBox"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+        </div>
 
         <div class="mainCityBox col-4 d-flex justify-content-evenly align-items-center" id="1stCity">
             <div>Toronto</div>
             <div><i class="fa-solid fa-wind"></i></div>
-            <div>18C</div>
+            <div>18°C</div>
         </div>
 
         <div class="mainCityBox col-4 d-flex justify-content-evenly align-items-center" id="2ndCity">
             <div>Toronto</div>
             <div><i class="fa-solid fa-wind"></i></div>
-            <div>18C</div>
+            <div>18°C</div>
         </div>
 
 
-    </div>
-
-</div>
-
-
-    <div class="recentSearchBox">
 
     </div>
 
-    <div class="forecast">
+    </div>
+
+
+    <div class="container d-flex justify-content-center " id="recentBox">
+
+    <div class="row col-xxl-10 part1">
+
+        <div class="col-3 myBox recentBox">
+            <h4>Recent Search:</h4>
+        </div>
+
+        <span class="col-1"></span>
+
+        <div class="col-8 myBox">
+            <h4>weather info:</h4>
+        </div>
+        
+    </div>
 
     </div>
 
+
+    <div class="forecast" id="searchResult">
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>

@@ -1,11 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.header{
-    margin-top: 40px;
+
+
+body{
+    background-image: url('../img/weather-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.title{
+    color: aliceblue;
+    margin-bottom: 30px;
+    text-shadow:5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.functionBar{
+    margin-bottom: 60px;
+}
+
+.myBox{
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    border-right: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    background: rgba(27, 25, 25, 0.2);
+    border-radius: 18px;
+    color:#fff;
 }
 
 .searchBox{
@@ -14,10 +43,33 @@
 
 .mybtn{
     background-color: rgba(84, 177, 253, 0.6);
+    color: #fff;
 }
 
 .mybtn:hover{
     background-color: rgba(10, 143, 252, 0.6);
-    color: #fff;
-    
+    color: #fff;  
+}
+
+.part1{
+  height: 300px;
+}
+
+.recentBox{
+    overflow: auto;
+    height: 300px;
+}
+
+.recentBox::-webkit-scrollbar{
+    width: 10px;
+    height: 5px;
+}
+
+.recentBox::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+.recentBox::-webkit-scrollbar-thumb{
+	background:linear-gradient(to top,#2980B9,#6DD5FA,#FFFFFF,transparent);
+	border-radius: 2rem;
 }
