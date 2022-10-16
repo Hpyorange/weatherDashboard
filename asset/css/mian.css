@@ -21,6 +21,10 @@ body{
     text-shadow:5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 
+.text{
+    text-shadow:5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
 .functionBar{
     margin-bottom: 60px;
 }
@@ -34,7 +38,7 @@ body{
     backdrop-filter: blur(10px);
     background: rgba(27, 25, 25, 0.2);
     border-radius: 18px;
-    color:#fff;
+    color:aliceblue;
 }
 
 .searchBox{
@@ -43,17 +47,18 @@ body{
 
 .mybtn{
     background-color: rgba(84, 177, 253, 0.6);
-    color: #fff;
+    color: aliceblue;
 }
 
 .mybtn:hover{
     background-color: rgba(10, 143, 252, 0.6);
-    color: #fff;  
+    color: aliceblue;  
 }
 
 .part1{
   height: 300px;
 }
+
 
 .recentBox{
     overflow: auto;
@@ -73,3 +78,50 @@ body{
 	background:linear-gradient(to top,#2980B9,#6DD5FA,#FFFFFF,transparent);
 	border-radius: 2rem;
 }
+
+.myCard{
+    display: grid;
+    grid-template-rows: 140px 240px;
+    grid-template-areas: 'img' 'text';
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    border-right: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(14px);
+    background: rgba(27, 25, 25, 0.2);
+}
+
+.c-text{
+    grid-area: text;
+    margin:25px;
+    color: aliceblue;
+    text-shadow:5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.c-img{
+    grid-area: img;
+    background-image: url(./img/m-bg.jpg);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.swiper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 280px;
+    height: 100%;
+}
+
+
+

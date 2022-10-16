@@ -19,7 +19,7 @@
 
     <div class="container d-flex justify-content-center functionBar">
 
-        <div class="myBox row col-xxl-10 text-center">
+        <div class="myBox row col-10 text-center">
         
         <div class="col-4">
         
@@ -30,13 +30,13 @@
 
         </div>
 
-        <div class="mainCityBox col-4 d-flex justify-content-evenly align-items-center" id="1stCity">
+        <div class="mainCityBox col-4 d-flex justify-content-evenly align-items-center text" id="1stCity">
             <div>Toronto</div>
             <div><i class="fa-solid fa-wind"></i></div>
             <div>18°C</div>
         </div>
 
-        <div class="mainCityBox col-4 d-flex justify-content-evenly align-items-center" id="2ndCity">
+        <div class="mainCityBox col-4 d-flex justify-content-evenly align-items-center text" id="2ndCity">
             <div>Toronto</div>
             <div><i class="fa-solid fa-wind"></i></div>
             <div>18°C</div>
@@ -49,18 +49,18 @@
     </div>
 
 
-    <div class="container d-flex justify-content-center " id="recentBox">
+    <div class="container d-flex justify-content-center" id="recentBox">
 
-    <div class="row col-xxl-10 part1">
+    <div class="row col-10 part1">
 
         <div class="col-3 myBox recentBox">
-            <h4>Recent Search:</h4>
+            <h4 class="text">Recent Search:</h4>
         </div>
 
         <span class="col-1"></span>
 
         <div class="col-8 myBox">
-            <h4>weather info:</h4>
+            <h4 class="text">weather info:</h4>
         </div>
         
     </div>
@@ -68,11 +68,94 @@
     </div>
 
 
-    <div class="forecast" id="searchResult">
+    <div class="forecast container" id="searchResult">
+
+        <div class="swiper mySwiper d-flex align-content-center col-10">
+            <div class="swiper-wrapper">
+    
+                <div class="col-3 myCard swiper-slide">
+                    <div class="c-img" ></div>
+                    <div class="c-text">
+                        <h2>Monday</h2>
+                        <ul>
+                            <li>Recipe</li>
+                            <li>details</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <div class="c-function"></div>
+                </div>
+    
+                <div class="col-3 myCard swiper-slide" id="c2">
+                    <div class="c-img"></div>
+                    <div class="c-text">
+                        <h2>Tuesday</h2>
+                        <ul>
+                            <li>Recipe</li>
+                            <li>details</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <div class="c-function"></div>
+                </div>
+    
+                <div class="col-3 myCard swiper-slide" id="c3">
+                    <div class="c-img" ></div>
+                    <div class="c-text">
+                        <h2>Wednesday</h2>
+                        <ul>
+                            <li>Recipe</li>
+                            <li>details</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <div class="c-function"></div>
+                </div>
+                
+                <div class="col-3 myCard swiper-slide" id="c4">
+                    <div class="c-img" ></div>
+                    <div class="c-text">
+                        <h2>Thursday</h2>
+                        <ul>
+                            <li>Recipe</li>
+                            <li>details</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <div class="c-function"></div>
+                </div>
+                
+                <div class="col-3 myCard swiper-slide" id="c5">
+                    <div class="c-img"></div>
+                    <div class="c-text">
+                        <h2>Friday</h2>
+                        <ul>
+                            <li>Recipe</li>
+                            <li>details</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <div class="c-function"></div>
+                </div>
+
+                
+              </div>
+              <div class="swiper-pagination"></div>
+
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+        </div>
+
+
 
     </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./asset/js/main.js"></script>
+
+    <script>
+
+    </script>
 </body>
 </html>
