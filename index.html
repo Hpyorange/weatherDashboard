@@ -15,31 +15,33 @@
 
     <div class="text-center mt-4 title">
         <h1>Weather Dashboard</h1>
+
+        <h3 id="today"></h3>
     </div>
 
     <div class="container d-flex justify-content-center functionBar">
 
         <div class="myBox row col-10 text-center">
         
-        <div class="col-4">
+        <div class="col-4 d-flex align-items-center">
         
-            <div class="input-group">
-                <input type="text" placeholder="Search for location" class="form-control searchBox">
+            <div class="input-group ">
+                <input type="text" placeholder="Search for location" class="form-control searchBox" id ='userInput'>
                 <button class="searchBtn col-3 btn mybtn input-group-append searchBox"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
 
         </div>
 
-        <div class="mainCityBox col-4 d-flex justify-content-evenly align-items-center text" id="1stCity">
-            <div>Toronto</div>
-            <div><i class="fa-solid fa-wind"></i></div>
-            <div>18°C</div>
+        <div class="mainCityBox col-4 d-flex justify-content-evenly align-items-center text" >
+            <div class="cityName" id="cityName1"></div>
+            <div id="icon1"></div>
+            <div id="mainTemp1"></div>
         </div>
 
-        <div class="mainCityBox col-4 d-flex justify-content-evenly align-items-center text" id="2ndCity">
-            <div>Toronto</div>
-            <div><i class="fa-solid fa-wind"></i></div>
-            <div>18°C</div>
+        <div class="mainCityBox col-4 d-flex justify-content-evenly align-items-center text">
+            <div class="cityName" id="cityName2"></div>
+            <div id="icon2"></div>
+            <div id="mainTemp2"></div>
         </div>
 
 
@@ -49,18 +51,26 @@
     </div>
 
 
-    <div class="container d-flex justify-content-center" id="recentBox">
+    <div class="container d-flex justify-content-center">
 
     <div class="row col-10 part1">
 
-        <div class="col-3 myBox recentBox">
+        <div class="col-3 myBox recentBox" id="recentBox">
             <h4 class="text">Recent Search:</h4>
+            <button class="btn cityBtn text-center">Toronto</button>
         </div>
 
         <span class="col-1"></span>
 
         <div class="col-8 myBox">
-            <h4 class="text">weather info:</h4>
+            <h4 class="text">Weather Info:</h4>
+
+            <div class="mt-3">
+                <h5 class='my-4'>Temp:</h5>
+                <h5 class='my-4'>Wind:</h5>
+                <h5 class='my-4'>Humidity:</h5>
+                <h5 class='my-4'>UV Index:</h5>
+            </div>
         </div>
         
     </div>
@@ -73,7 +83,7 @@
         <div class="swiper mySwiper d-flex align-content-center col-10">
             <div class="swiper-wrapper">
     
-                <div class="col-3 myCard swiper-slide">
+                <div class="col-3 myCard swiper-slide" id="c1">
                     <div class="c-img" ></div>
                     <div class="c-text">
                         <h2>Monday</h2>
@@ -83,7 +93,6 @@
                             <li>...</li>
                         </ul>
                     </div>
-                    <div class="c-function"></div>
                 </div>
     
                 <div class="col-3 myCard swiper-slide" id="c2">
@@ -96,7 +105,6 @@
                             <li>...</li>
                         </ul>
                     </div>
-                    <div class="c-function"></div>
                 </div>
     
                 <div class="col-3 myCard swiper-slide" id="c3">
@@ -109,7 +117,6 @@
                             <li>...</li>
                         </ul>
                     </div>
-                    <div class="c-function"></div>
                 </div>
                 
                 <div class="col-3 myCard swiper-slide" id="c4">
@@ -122,7 +129,6 @@
                             <li>...</li>
                         </ul>
                     </div>
-                    <div class="c-function"></div>
                 </div>
                 
                 <div class="col-3 myCard swiper-slide" id="c5">
@@ -135,7 +141,6 @@
                             <li>...</li>
                         </ul>
                     </div>
-                    <div class="c-function"></div>
                 </div>
 
                 
@@ -152,6 +157,8 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./asset/js/main.js"></script>
 
     <script>

@@ -25,8 +25,12 @@ body{
     text-shadow:5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 
+.cityName{
+    font-size: 20px;
+}
+
 .functionBar{
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .myBox{
@@ -103,11 +107,6 @@ body{
 
 .c-img{
     grid-area: img;
-    background-image: url(./img/m-bg.jpg);
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 
@@ -121,6 +120,17 @@ body{
     background-size: cover;
     width: 280px;
     height: 100%;
+}
+
+.cityBtn{
+    width: 100%;
+    background-color:rgb(145, 204, 252);
+    color:rgb(31, 31, 31);
+}
+
+.cityBtn:hover{
+    background-color:rgb(84, 177, 253);
+    color:aliceblue;
 }
 
 
