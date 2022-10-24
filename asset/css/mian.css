@@ -6,8 +6,6 @@
     box-sizing: border-box;
 }
 
-
-
 body{
     background-image: url('../img/weather-bg.jpg');
     background-repeat: no-repeat;
@@ -21,6 +19,11 @@ body{
     text-shadow:5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 
+#searchResult .title{
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+
 .text{
     text-shadow:5px 5px 15px rgba(0, 0, 0, 0.9);
 }
@@ -29,12 +32,17 @@ body{
     font-size: 20px;
 }
 
+.searchCity{
+    font-size: 24px;
+    font-weight: 600;
+}
+
 .functionBar{
     margin-bottom: 40px;
 }
 
 .myBox{
-    padding: 16px 20px;
+    padding:16px 20px;
     border-top: 1px solid rgba(255,255,255,0.5);
     border-left: 1px solid rgba(255,255,255,0.5);
     border-bottom: 1px solid rgba(255,255,255,0.3);
@@ -60,13 +68,13 @@ body{
 }
 
 .part1{
-  height: 300px;
+  height: 260px;
 }
 
 
 .recentBox{
     overflow: auto;
-    height: 300px;
+    height: 260px;
 }
 
 .recentBox::-webkit-scrollbar{
@@ -103,12 +111,30 @@ body{
     margin:25px;
     color: aliceblue;
     text-shadow:5px 5px 15px rgba(0, 0, 0, 0.9);
+    font-size: 20px;
 }
 
 .c-img{
     grid-area: img;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.temp{
+    text-align: start;
+    text-indent: 1.5rem;
+}
+
+.wind{
+    text-align: start;
+    text-indent: 1.5rem;
+}
+
+.humid{
+    text-align: start;
+    text-indent: 1.5rem;
+}
 
 .swiper {
     padding-top: 50px;
