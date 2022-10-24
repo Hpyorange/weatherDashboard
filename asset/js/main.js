@@ -105,7 +105,7 @@ let forecast = function(){
                     $(`#day${i} h2`).text(displayDate);
                     $(`#day${i} .c-img`).html(weatherIcon);
                     $(`#day${i} .temp`).text(`Temp:${forecastDetail.temp}°C`)
-                    $(`#day${i} .wind`).text(`Wind:${forecastDetail.wind}MPS`)
+                    $(`#day${i} .wind`).text(`Wind:${forecastDetail.wind} MPS`)
                     $(`#day${i} .humid`).text(`Humidity:${forecastDetail.humid}%`)
                 }
                 
@@ -177,7 +177,7 @@ let searchDetail = function(searchCityName){
                     $(`#day${i} h2`).text(displayDate);
                     $(`#day${i} .c-img`).html(weatherIcon);
                     $(`#day${i} .temp`).text(`Temp:${forecastDetail.temp}°C`)
-                    $(`#day${i} .wind`).text(`Wind:${forecastDetail.wind}MPS`)
+                    $(`#day${i} .wind`).text(`Wind:${forecastDetail.wind} MPS`)
                     $(`#day${i} .humid`).text(`Humidity:${forecastDetail.humid}%`)
                 }
                 
