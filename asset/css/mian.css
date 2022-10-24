@@ -152,11 +152,17 @@ body{
     width: 100%;
     background-color:rgb(145, 204, 252);
     color:rgb(31, 31, 31);
+    margin-bottom: 8px;
 }
 
 .cityBtn:hover{
     background-color:rgb(84, 177, 253);
     color:aliceblue;
+}
+
+.defaultBtn{
+    width: 100%;
+    margin-bottom: 8px;
 }
 
 

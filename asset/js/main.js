@@ -70,7 +70,6 @@ let displayMainTemp2 = function(){
                 $(`#icon2`).html(`<img src = http://openweathermap.org/img/wn/${icon}.png>`);
                 let temp = Math.round(data.main.temp); 
                 $(`#mainTemp2`).text(`${temp}°C`);
-                console.log(data);
         });
     } 
 
@@ -102,7 +101,7 @@ let forecast = function(){
                     };
                     let displayDate = moment.unix(forecastDetail.date).format("MM/DD/YYYY");
                     let weatherIcon = `<img src = http://openweathermap.org/img/wn/${forecastDetail.icon}.png>`
-                    console.log(forecastDetail.temp)
+                    
                     $(`#day${i} h2`).text(displayDate);
                     $(`#day${i} .c-img`).html(weatherIcon);
                     $(`#day${i} .temp`).text(`Temp:${forecastDetail.temp}°C`)
@@ -122,9 +121,9 @@ let forecast = function(){
 //default city 
 forecast();
 
-let searchResult = function(){
+let searchDetail = function(searchCityName){
 
-    let searchCityName = searchInput.val().trim().toUpperCase();
+    
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchCityName}&appid=1d4fe92726b0d3cc08e41e30f8f8511d&units=metric`;
 
     fetch(url).then(function(response){
@@ -148,19 +147,22 @@ let searchResult = function(){
                 $(`#Hum`).text(`Humidity: ${humid}%`)
 
         });
-    } 
+    } else{
+        alert('Sorry,city not found');
+    }
 
 })
     .catch(function() {
         alert("Unable to connect, please try again later");
     });
 
+
     let forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${searchCityName}&appid=1d4fe92726b0d3cc08e41e30f8f8511d&units=metric`;
     fetch(forecastUrl).then(function(response){
 
         if(response.ok){
             response.json().then(function(data) {
-                console.log(data);
+                
                 for(let i = 0; i < data.list.length; i+=8){
                     let forecastDetail ={
                         date:data.list[i].dt,
@@ -171,7 +173,7 @@ let searchResult = function(){
                     };
                     let displayDate = moment.unix(forecastDetail.date).format("MM/DD/YYYY");
                     let weatherIcon = `<img src = http://openweathermap.org/img/wn/${forecastDetail.icon}.png>`
-                    console.log(forecastDetail.temp)
+                    
                     $(`#day${i} h2`).text(displayDate);
                     $(`#day${i} .c-img`).html(weatherIcon);
                     $(`#day${i} .temp`).text(`Temp:${forecastDetail.temp}°C`)
@@ -190,6 +192,30 @@ let searchResult = function(){
 
 }
 
+let searchResult = function(event){
+
+    event.preventDefault();
+    let userInput = searchInput.val().trim().toUpperCase();
+    if(userInput){
+        searchDetail(userInput);
+        let recentBtn = document.createElement('button');
+        recentBtn.setAttribute('id',userInput);
+        recentBtn.classList.add('btn','cityBtn');
+        recentBtn.textContent=userInput;
+        recent.append(recentBtn);
+    } else {
+        alert("Please enter a city name");
+    }
+    
+
+}
+
+let buttonClickEvent = function(event) {
+    let recentSearch = event.target.getAttribute("id");
+    searchDetail (recentSearch);
+};
+
 
 searchBtn.click(searchResult);
+recent.click(buttonClickEvent);
 
