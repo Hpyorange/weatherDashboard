@@ -72,7 +72,7 @@ body{
 
 .recentBox{
     overflow: auto;
-    height: 260px;
+    height: 300px;
 }
 
 .recentBox::-webkit-scrollbar{
@@ -163,5 +163,15 @@ body{
     margin-bottom: 8px;
 }
 
+@media only screen and (max-device-width: 576px){
+    .order {
+        display: flex;
+        flex-direction: column;
+      }
 
+    .order div:first-child{
+        order: 1;
+    }
+
+}
 
