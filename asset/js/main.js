@@ -41,6 +41,7 @@ let displayMainTemp1 = function(){
                 $(`#searchIcon`).html(`<img src = http://openweathermap.org/img/wn/${icon}.png>`);
 
                 $(`#Temp`).text(`Temp: ${temp}°C`);
+                //.test('Temp:' + temp + 'c')
 
                 let wind = data.wind.speed;
                 $('#Wind').text(`Wind: ${wind} MPS`);
